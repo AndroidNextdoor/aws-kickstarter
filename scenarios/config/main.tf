@@ -2,5 +2,5 @@
 # There are a lot potential configuration options, so please consult the module documentation if in doubt
 
 module "config" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//config"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//config"
 }

@@ -5,7 +5,7 @@ locals {
 
 
 module "iam_users" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-users"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-users"
   providers = {
     aws = aws.users
   }
@@ -15,7 +15,7 @@ module "iam_users" {
 }
 
 module "iam_resources" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-resources"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-resources"
   providers = {
     aws = aws.resources
   }

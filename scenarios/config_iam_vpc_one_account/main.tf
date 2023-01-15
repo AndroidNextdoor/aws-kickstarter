@@ -1,21 +1,21 @@
 module "config" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//config"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//config"
 }
 
 module "core_vpc" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//vpc"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//vpc"
 
   tags = var.tags
 }
 
 module "iam_users" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-users"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-users"
 
   iam_users = var.iam_users
 }
 
 module "iam_resources" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-resources"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-resources"
 }
 
 # This is an example of a role restricting access for regular user accounts to any VPC API to avoid potential misconfiguration

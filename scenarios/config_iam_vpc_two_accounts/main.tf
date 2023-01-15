@@ -4,7 +4,7 @@ locals {
 }
 
 module "iam_users" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-users"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-users"
   providers = {
     aws = aws.users
   }
@@ -14,7 +14,7 @@ module "iam_users" {
 }
 
 module "iam_resources" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//iam-resources"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-resources"
   providers = {
     aws = aws.resources
   }
@@ -22,14 +22,14 @@ module "iam_resources" {
   users_account_id = local.users_account_id
 }
 module "config" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//config"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//config"
   providers = {
     aws = aws.resources
   }
 }
 
 module "core_vpc" {
-  source = "git::https://github.com/moritzheiber/terraform-aws-core-modules.git//vpc"
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//vpc"
   providers = {
     aws = aws.resources
   }
