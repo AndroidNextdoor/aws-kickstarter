@@ -8,5 +8,8 @@ variable "iam_users" {
     user = {
       groups = ["users"]
     }
+    service_user = {
+      groups = ["service_users"]
+    }
   }
 }
