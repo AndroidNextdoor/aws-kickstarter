@@ -11,13 +11,10 @@ variable "iam_users" {
   description = "A list of users you want to create inside the \"users\" account"
   default = {
     SorryNotSorry = {
-      groups = ["admins"]
+      groups = ["DevOps"]
     }
     SorryNotSorryDev = {
-      groups = ["users"]
-    }
-    SorryNotSorry4Partying = {
-      groups = ["service_users"]
+      groups = ["Developers"]
     }
   }
 }

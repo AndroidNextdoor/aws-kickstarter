@@ -7,8 +7,16 @@
 
 module "iam_users" {
   source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-users"
+
+  iam_users = var.iam_users
 }
 
 module "iam_resources" {
   source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-resources"
+}
+
+module "core_vpc" {
+  source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//vpc"
+
+  tags = var.tags
 }

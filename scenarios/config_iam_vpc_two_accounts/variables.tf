@@ -16,8 +16,5 @@ variable "iam_users" {
     SorryNotSorryDev = {
       groups = ["users"]
     }
-    SorryNotSorry4Partying = {
-      groups = ["service_users"]
-    }
   }
 }

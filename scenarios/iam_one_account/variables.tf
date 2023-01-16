@@ -3,10 +3,39 @@ variable "iam_users" {
   description = "A list of users you want to create inside the \"users\" account"
   default = {
     SorryNotSorry = {
-      groups = ["admins"]
+      groups = ["DevOps"]
     }
     SorryNotSorry4Partying = {
-      groups = ["users"]
+      groups = ["Developers"]
     }
+    Sorry4Partying = {
+      groups = ["Limited"]
+    }
+  }
+}
+
+variable "iam_resources" {
+  type        = map(map(list(string)))
+  description = "A list of users you want to create inside the \"users\" account"
+  default = {
+    SorryNotSorry = {
+      groups = ["DevOps"]
+    }
+    SorryNotSorry4Partying = {
+      groups = ["Developers"]
+    }
+    Sorry4Partying = {
+      groups = ["Limited"]
+    }
+  }
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "A common map of tags for all VPC resources that are created (for e.g. billing purposes)"
+  default = {
+    Resource = "AndroidNextdoor"
+    Owner = "Andrew Nixdorf"
+    Email = "nixdorfa@gmail.com"
   }
 }
