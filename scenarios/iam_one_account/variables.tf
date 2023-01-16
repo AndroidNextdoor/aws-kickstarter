@@ -2,13 +2,13 @@ variable "iam_users" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    SorryNotSorry = {
+    AndroidNextdoorAdmin = {
       groups = ["DevOps"]
     }
-    SorryNotSorry4Partying = {
+    Developer = {
       groups = ["Developers"]
     }
-    Sorry4Partying = {
+    Limited-User = {
       groups = ["Limited"]
     }
   }
@@ -18,13 +18,13 @@ variable "iam_resources" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    SorryNotSorry = {
+    Admin = {
       groups = ["DevOps"]
     }
-    SorryNotSorry4Partying = {
+    Developer = {
       groups = ["Developers"]
     }
-    Sorry4Partying = {
+    Limited-User = {
       groups = ["Limited"]
     }
   }
