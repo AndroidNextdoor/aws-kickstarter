@@ -1,4 +1,8 @@
-# AWS Kickstarter
+# AWS Kickstarter - Pro
+
+```
+This repo was forked from  was designed to kickstart a simple organization using 'admin', 'developer', and 'limited' groups.
+```
 
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
