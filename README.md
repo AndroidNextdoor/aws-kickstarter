@@ -1,8 +1,5 @@
 # AWS Kickstarter - Pro
-
-```
-This repo was forked from  was designed to kickstart a simple organization using 'admin', 'developer', and 'limited' groups.
-```
+## This repo was designed to accompany a workshop on Katalon Testing with AWS Device Farm. The roles included in the core modules are designed to demonstrate a solid organizational structure of IAM permissions. Other roles can be defined using this kickstarter to suite your needs.
 
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
@@ -10,8 +7,8 @@ This is a comprehensive toolkit for provisioning AWS accounts for a couple of co
 
 The following tools are required:
 
-- [Terraform](https://terraform.io) (**>= 0.12.6**)
-- [awscli](https://aws.amazon.com/cli/) (>= 1.15.49)
+- [Terraform](https://terraform.io) (**>= 1.2.8**)
+- [awscli](https://aws.amazon.com/cli/) (>= 2.8.12)
 - Any device (e.g. a [NitroKey](https://www.nitrokey.com/) or [YubiKey](https://www.yubico.com/product/yubikey-5-nfc)) and/or app (for either [Android](https://f-droid.org/repository/browse/?fdfilter=totp&fdid=net.bierbaumer.otp_authenticator) or [iOS](https://cooperrs.de/othauth.html)) that supports [2FA/TOTP](https://en.wikipedia.org/wiki/Multi-factor_authentication).
 
 _Note: Although AWS [now supports](https://aws.amazon.com/blogs/security/use-yubikey-security-key-sign-into-aws-management-console/) the modern [FIDO2 procotol](https://fidoalliance.org/fido2/) for adding a second factor to your account [it lacks support for the command line](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_u2f_supported_configurations.html), which renders it an unsuable option for most of what you'd either do with this kickstarter or AWS APIs in general._
@@ -20,7 +17,11 @@ _Note: Although AWS [now supports](https://aws.amazon.com/blogs/security/use-yub
 
 While some of the scenarios are (almost) free of charge (`iam_one_account`, `iam_two_accounts`, `config`), others **will cost you money once you have them provisioned**. This is especially true for the `vpc` scenario, and therefore, since these include the `vpc` scenario, also the `config_iam_vpc_one_account` and `config_iam_vpc_two_accounts` scenarios. The costs for the most elaborate of the scenarios (`config_iam_vpc_two_accounts`) is roughly $70/65 EUR _per month_ (and a lot less if you're testing it for a short while).
 
-## Available scenarios
+## Workshop Kickstarter
+
+_Note: This workshop was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
+
+For this workshop, you can apply the terraform in the workshop_kickstarter using your root account. After successfully applying the kickstarter, be sure to remove any keys associated with your root account. You can enable console access for the DevOps or Developer users. Do not enable console access for Limited Users.
 
 _Note: Any of these scenarios require for you to have at least CLI access to the AWS API, most of them even `root` level or `AdministratorAccess` privileges. A way of setting these up is described [in the documentation for setting up your initial credentials](docs/initial_credentials.md)._
 
@@ -32,9 +33,9 @@ To utilize your provisioned resources you need to [configure your AWS CLI proper
 
 Located in [`scenarios/iam_one_account`](scenarios/iam_one_account).
 
-It defines a single account, where users assume either of two roles, `resource-admin` if they are a part of the `admin` group, or `resource-user` if they are a part of the `users` group. `resource-admin` allows for full access to the account, including IAM and Organizations. `resource-user` allows access to any other service _except_ IAM and Organizations. Use these privileges wisely.
+It defines a single account, where users assume either of two roles, `resource-admin` if they are a part of the `Admin` group, or `resource-user` if they are a part of the `Developer` group. `resource-admin` allows for full access to the account, including IAM and Organizations. `resource-user` allows access to any other service _except_ IAM and Organizations. Use these privileges wisely.
 
-The scenario contains two example users, `admin` and `user` to given you an idea of how you can create users along with using the modules.
+The scenario contains three example users, `Admin` and `Developer` to given you an idea of how you can create users along with using the modules.
 
 To assume either of these roles, either use the Web Console to assume a role (<your-username-at-the-top-right> > Switch role) or through the AWS CLI. The relevant snippet for the AWS CLI would look like this:
 

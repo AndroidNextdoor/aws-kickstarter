@@ -18,7 +18,7 @@ variable "iam_resources" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    Admin = {
+    AndroidNextdoorAdmin = {
       groups = ["DevOps"]
     }
     Developer = {
