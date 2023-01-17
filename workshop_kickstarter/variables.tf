@@ -2,14 +2,23 @@ variable "iam_users" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
+    Owner = {
+      groups = ["Owner"]
+    }
     DevOpsAdmin = {
       groups = ["DevOps"]
+    }
+    PowerUser = {
+      groups = ["PowerUsers"]
     }
     Developer = {
       groups = ["Developers"]
     }
-    Limited-User = {
-      groups = ["Limited"]
+    Billing = {
+      groups = ["Billing"]
+    }
+    PipelineUser = {
+      groups = ["Pipeline"]
     }
   }
 }
@@ -18,14 +27,23 @@ variable "iam_resources" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
+    Owner = {
+      groups = ["Owner"]
+    }
     DevOpsAdmin = {
       groups = ["DevOps"]
     }
     Developer = {
       groups = ["Developers"]
     }
-    Limited-User = {
-      groups = ["Limited"]
+    PowerUser = {
+      groups = ["PowerUsers"]
+    }
+    PipelineUser = {
+      groups = ["Pipeline"]
+    }
+    Billing = {
+      groups = ["Billing"]
     }
   }
 }
