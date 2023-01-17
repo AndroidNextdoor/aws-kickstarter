@@ -2,10 +2,10 @@ variable "iam_users" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    Owner = {
-      groups = ["Owner"]
+    "andrewnixdorf@androidnextdoor.com" = {
+      groups = ["DevOpsAdmins"]
     }
-    DevOpsAdmin = {
+    DevOps = {
       groups = ["DevOps"]
     }
     PowerUser = {
@@ -27,10 +27,10 @@ variable "iam_resources" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    Owner = {
-      groups = ["Owner"]
+    "andrewnixdorf@androidnextdoor.com" = {
+      groups = ["DevOpsAdmin"]
     }
-    DevOpsAdmin = {
+    DevOps = {
       groups = ["DevOps"]
     }
     Developer = {
