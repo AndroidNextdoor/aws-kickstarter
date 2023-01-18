@@ -1,5 +1,16 @@
 # AWS Kickstarter - Pro
-## This repo was designed to accompany a workshop on Katalon Testing with AWS Device Farm. The roles included in the core modules are designed to demonstrate a solid organizational structure of IAM permissions. Other roles can be defined using this kickstarter to suite your needs.
+## This repo was designed to accompany a workshop on Katalon Testing with AWS Device Farm. The roles included in the core modules are designed to demonstrate a solid organizational structure of IAM permissions.
+
+## The roles created in the module are defines below:
+
+### DevOpsAdmin - The Highest Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info. 
+### DevOps      - The Highest Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+### PowerUser   - Developer Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info.
+### Developer   - Developer Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+### Owner       - Role has access to billing and has full permissions to update and modify billing related functions
+### Billing     - Role has access to billing and has limited permissions to view billing related functions
+
+For this workshop, you can apply the terraform in the workshop_kickstarter using your root account. After successfully applying the kickstarter, be sure to remove any keys associated with your root account. You can enable console access for the DevOpsAdmin and Power users. Do not enable console access for Pipeline Users.
 
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
@@ -19,9 +30,7 @@ While some of the scenarios are (almost) free of charge (`iam_one_account`, `iam
 
 ## Workshop Kickstarter
 
-_Note: This workshop was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
-
-For this workshop, you can apply the terraform in the workshop_kickstarter using your root account. After successfully applying the kickstarter, be sure to remove any keys associated with your root account. You can enable console access for the DevOps or Developer users. Do not enable console access for Limited Users.
+Note: This workshop was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
 
 _Note: Any of these scenarios require for you to have at least CLI access to the AWS API, most of them even `root` level or `AdministratorAccess` privileges. A way of setting these up is described [in the documentation for setting up your initial credentials](docs/initial_credentials.md)._
 
