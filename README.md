@@ -2,17 +2,26 @@
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 ## The roles created in the module are defines below:
 
-- DevOpsAdmin - The Highest Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info. 
-- DevOps - The Highest Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-- PowerUser - Developer Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info.
-- Developer - Developer Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+- DevOpsAdmin - The Highest Privileges are granted to this role. It CAN be used to run commands via cli without the need for additional MFA info. 
+- DevOps - The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+- PowerUser - Normal Developer Privileges are granted to this role. It CAN be used to run commands via cli without the need for additional MFA info.
+- Developer - Normal Developer Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
 - Owner - Role has access to billing and has full permissions to update and modify billing related functions
 - Billing - Role has access to billing and has limited permissions to view billing related functions
 
-For this workshop, you can apply the terraform in the workshop_kickstarter using your root account. After successfully applying the kickstarter, be sure to remove any keys associated with your root account. You can enable console access for the DevOpsAdmin and Power users. Do not enable console access for Pipeline Users.
+## Workshop Repo Setup Instructions
+For this aws kickstarter, users can apply the terraform in `./workshop_kickstarter` using keys generated from thd root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
 
-## Original Repo Instructions
+As the root user, enable console access for the DevOpsAdmin, DevOpos and PowerUser. Do not enable console access for Pipeline Users.
 
+If done correctly, DevOps, Developers, Owners, and Billing Groups users should be restricted from viewing anything until they have enabled an MFA device.
+After creating and adding an MFA device for an account, the user needs to log out and log back in to have the assigned role permissions.
+
+DevOpsAdmins and PowerUsers are granted access without requiring an active MFA session token. 
+
+As a general rule of thumb, the DevOps and Developer roles should be assigned to Engineers first. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the DevOpsAdmin or PowerUser role at that time.
+
+## Original Repo Setup Instructions
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
 ## Prerequisites
