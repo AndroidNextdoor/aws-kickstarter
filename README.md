@@ -2,8 +2,8 @@
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 
 ## Roles Created
-- DevOpsAdmin - The Highest Privileges are granted to this role. Use this role sparingly and wisely! This role should be kept unassigned until a scenario arises that it is needed. It CAN be used to run commands via cli without the need for additional MFA info. 
-- DevOps - The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+- DevOpsAdmin - *Use this role sparingly and wisely!* The Highest Privileges are granted to this role. This role should be kept unassigned until a scenario arises that it is needed. It CAN be used to run commands via cli without the need for additional MFA info. 
+- DevOps - *Use this role sparingly and wisely!* The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
 - PowerUser - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CAN be used to run commands via cli without the need for additional MFA info.
 - Developer - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CANNOT be used to run commands via cli without the need for additional MFA info.
 - Pipeline - Scoped Pipeline Privileges are granted to this role. Service users should not have aws console access. It CAN be used to run commands via cli without the need for additional MFA info.
