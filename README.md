@@ -9,7 +9,10 @@
 - Owner - Role has access to billing and has full permissions to update and modify billing related functions
 - Billing - Role has access to billing and has limited permissions to view billing related functions
 
-## Workshop Repo Setup Instructions
+## AWS Kickstarter - Pro Level
+
+Note: This kickstarter was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
+
 For this aws kickstarter, users can apply the terraform in `./workshop_kickstarter` using keys generated from thd root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
 
 As the root user, enable console access for the DevOpsAdmin, DevOpos and PowerUser. Do not enable console access for Pipeline Users.
@@ -37,10 +40,6 @@ _Note: Although AWS [now supports](https://aws.amazon.com/blogs/security/use-yub
 ## Disclaimer
 
 While some of the scenarios are (almost) free of charge (`iam_one_account`, `iam_two_accounts`, `config`), others **will cost you money once you have them provisioned**. This is especially true for the `vpc` scenario, and therefore, since these include the `vpc` scenario, also the `config_iam_vpc_one_account` and `config_iam_vpc_two_accounts` scenarios. The costs for the most elaborate of the scenarios (`config_iam_vpc_two_accounts`) is roughly $70/65 EUR _per month_ (and a lot less if you're testing it for a short while).
-
-## Workshop Kickstarter
-
-Note: This workshop was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
 
 _Note: Any of these scenarios require for you to have at least CLI access to the AWS API, most of them even `root` level or `AdministratorAccess` privileges. A way of setting these up is described [in the documentation for setting up your initial credentials](docs/initial_credentials.md)._
 
