@@ -4,20 +4,20 @@
 ## Roles Created
 - **DevOpsAdmin** - **_Use this role sparingly and wisely!_** 
   - The Highest Privileges are granted to the DevOpsAdmin role. 
-  - DevOpsAdmin should be kept unassigned until a scenario arises that it is needed. 
-  - DevOpsAdmin _CAN_ be used to run commands via cli without the need for additional MFA info. 
+  - DevOpsAdmin should be kept unassigned until a scenario arises where it is needed. 
+  - DevOpsAdmin _CAN_ be used to run aws cli commands without MFA info. 
 - **DevOps** - **_Use this role sparingly and wisely!_**
   - The Highest Privileges are granted to the DevOps role. 
-  - DevOps _CANNOT_ be used to run commands via cli without the need for additional MFA info.
+  - DevOps _CANNOT_ be used to run aws cli commands without MFA info.
 - **PowerUser** - Standard Developer Privileges are granted to this role. 
   - PowerUser is limited and cannot delete many resources. 
-  - PowerUser _CAN_ be used to run commands via cli without the need for additional MFA info.
+  - PowerUser _CAN_ be used to run aws cli commands without MFA info.
 - **Developer** - Standard Developer Privileges are granted to this role. 
   - Developer is limited and cannot delete many resources. 
-  - Developer _CANNOT_ be used to run commands via cli without the need for additional MFA info.
+  - Developer _CANNOT_ be used to run cli commands without MFA info.
 - **Pipeline** - Scoped Pipeline Privileges are granted to this role. 
   - Service Account users should _NOT_ have aws console access. 
-  - Pipeline _CAN_ be used to run commands via cli without the need for additional MFA info.
+  - Pipeline _CAN_ be used to run cli commands without MFA info.
 - **Owner** - Role has access to billing and has full permissions to update and modify billing related functions. 
   - Users with Owner role need to access content in the console.
 - **Billing** - Role has access to billing and has limited permissions to view billing related functions. 
