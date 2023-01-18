@@ -45,10 +45,14 @@ To begin setting up user pools, update the user accounts or email addresses in `
 
 Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. 
 
-After successfully applying the terraform, remove any keys associated with your root account. 
+**IMPORTANT: After successfully applying the terraform, remove any keys associated with your root account!**
 
-As the root user navigate to the "Security credentials" section under an account to enable console access for the DevOpsAdmin, DevOps and PowerUsers.
+## Begin Using Limited Users
+
+As the root user navigate to the "Security credentials" section under an account to enable console access for the DevOps and PowerUsers.
+
 ![img.png](docs/img.png)
+
 Do not enable console access for Pipeline Users.
 
 Setup AWS Secret Keys for DevOpsAdmin, DevOps, PowerUser, and Pipeline.
