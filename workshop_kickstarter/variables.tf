@@ -28,7 +28,7 @@ variable "iam_resources" {
   description = "A list of resources you want to create inside the \"users\" account"
   default = {
     "DevOpsAdmins" = {
-      groups = ["DevOpsAdmin"]
+      groups = ["DevOpsAdmins"]
     }
     DevOps = {
       groups = ["DevOps"]

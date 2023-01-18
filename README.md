@@ -28,9 +28,15 @@ This pro kickstarter sets up a single AWS account with a basic vpc and typical s
 
 If interested in setting up two accounts, please refer to the instructions below from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter).
 
-To begin setting up user pools, update the user accounts or email addresses in `./workshop_kickstarter/variables.tf`. Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+To begin setting up user pools, update the user accounts or email addresses in `./workshop_kickstarter/variables.tf`. 
 
-As the root user, enable console access for the DevOpsAdmin, DevOps and PowerUser. Do not enable console access for Pipeline Users.
+![img_1.png](img_1.png)
+
+Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+
+As the root user, enable console access for the DevOpsAdmin, DevOps and PowerUser.
+![img.png](img.png)
+Do not enable console access for Pipeline Users.
 
 Setup AWS Secret Keys for DevOpsAdmin, DevOps, PowerUser, and Pipeline.
 
