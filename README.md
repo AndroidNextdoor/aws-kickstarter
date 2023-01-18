@@ -2,11 +2,11 @@
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 
 ## Roles Created
-- **DevOpsAdmin** - **_Use this role sparingly and wisely!_** The Highest Privileges are granted to this role. This role should be kept unassigned until a scenario arises that it is needed. It CAN be used to run commands via cli without the need for additional MFA info. 
-- **DevOps** - **_Use this role sparingly and wisely!_** The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-- **PowerUser** - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CAN be used to run commands via cli without the need for additional MFA info.
-- **Developer** - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CANNOT be used to run commands via cli without the need for additional MFA info.
-- **Pipeline** - Scoped Pipeline Privileges are granted to this role. Service users should not have aws console access. It CAN be used to run commands via cli without the need for additional MFA info.
+- **DevOpsAdmin** - **_Use this role sparingly and wisely!_** The Highest Privileges are granted to this role. DevOpsAdmin should be kept unassigned until a scenario arises that it is needed. DevOpsAdmin _CAN_ be used to run commands via cli without the need for additional MFA info. 
+- **DevOps** - **_Use this role sparingly and wisely!_** The Highest Privileges are granted to this role. DevOps _CANNOT_ be used to run commands via cli without the need for additional MFA info.
+- **PowerUser** - Standard Developer Privileges are granted to this role. PowerUser is limited and cannot delete many resources. PowerUser _CAN_ be used to run commands via cli without the need for additional MFA info.
+- **Developer** - Standard Developer Privileges are granted to this role. Developer is limited and cannot delete many resources. Developer _CANNOT_ be used to run commands via cli without the need for additional MFA info.
+- **Pipeline** - Scoped Pipeline Privileges are granted to this role. Service users should not have aws console access. Pipeline _CAN_ be used to run commands via cli without the need for additional MFA info.
 - **Owner** - Role has access to billing and has full permissions to update and modify billing related functions. Users with this role need to access content in the console.
 - **Billing** - Role has access to billing and has limited permissions to view billing related functions. Users with this role need to access content in the console.
 
