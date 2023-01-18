@@ -51,7 +51,7 @@ Next apply the terraform in `./workshop_kickstarter` with aws access keys from t
 
 As the root user, navigate to the "Security credentials" section under an account to enable console access for the DevOps and PowerUsers.
 
-![img.png](docs/img_1.png)
+![img.png](docs/img2.png)
 
 Do not enable console access for Pipeline Users.
 
