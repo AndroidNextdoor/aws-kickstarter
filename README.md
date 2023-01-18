@@ -32,9 +32,11 @@ To begin setting up user pools, update the user accounts or email addresses in `
 
 ![img_1.png](img_1.png)
 
-Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. 
 
-As the root user, enable console access for the DevOpsAdmin, DevOps and PowerUser.
+After successfully applying the terraform, remove any keys associated with your root account. 
+
+As the root user navigate to the "Security credentials" section under an account to enable console access for the DevOpsAdmin, DevOps and PowerUsers.
 ![img.png](img.png)
 Do not enable console access for Pipeline Users.
 
@@ -45,7 +47,7 @@ After creating and adding an MFA device for an account, the user needs to log ou
 
 DevOpsAdmins and PowerUsers are granted access without requiring an active MFA session token. 
 
-As a general rule of thumb, the DevOps and Developer roles should be assigned to Engineers first. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the DevOpsAdmin or PowerUser role at that time.
+_As a general rule of thumb, the DevOps and Developer roles should be assigned to Engineers first. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the DevOpsAdmin or PowerUser role at that time. This ensures that users abide by a company's required MFA policy._
 
 ## Original Repo Setup Instructions
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
