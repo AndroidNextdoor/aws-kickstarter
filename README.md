@@ -4,12 +4,12 @@
 
 ## The roles created in the module are defines below:
 
-### DevOpsAdmin - The Highest Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info. 
-### DevOps      - The Highest Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-### PowerUser   - Developer Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info.
-### Developer   - Developer Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-### Owner       - Role has access to billing and has full permissions to update and modify billing related functions
-### Billing     - Role has access to billing and has limited permissions to view billing related functions
+#### - DevOpsAdmin - The Highest Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info. 
+#### - DevOps      - The Highest Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+#### - PowerUser   - Developer Privileges are granted to this Role. It CAN be used to run commands via cli without the need for additional MFA info.
+#### - Developer   - Developer Privileges are granted to this Role. It CANNOT be used to run commands via cli without the need for additional MFA info.
+#### - Owner       - Role has access to billing and has full permissions to update and modify billing related functions
+#### - Billing     - Role has access to billing and has limited permissions to view billing related functions
 
 For this workshop, you can apply the terraform in the workshop_kickstarter using your root account. After successfully applying the kickstarter, be sure to remove any keys associated with your root account. You can enable console access for the DevOpsAdmin and Power users. Do not enable console access for Pipeline Users.
 
