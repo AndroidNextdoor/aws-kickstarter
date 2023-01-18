@@ -1,6 +1,7 @@
 # AWS Kickstarter Pro
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 
+
 ## Roles Created
 - DevOpsAdmin - *Use this role sparingly and wisely!* The Highest Privileges are granted to this role. This role should be kept unassigned until a scenario arises that it is needed. It CAN be used to run commands via cli without the need for additional MFA info. 
 - DevOps - *Use this role sparingly and wisely!* The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
@@ -10,13 +11,24 @@
 - Owner - Role has access to billing and has full permissions to update and modify billing related functions. Users with this role need to access content in the console.
 - Billing - Role has access to billing and has limited permissions to view billing related functions. Users with this role need to access content in the console.
 
+
+## Prerequisites
+
+The following tools are required:
+
+- [Terraform](https://terraform.io) (**>= 1.2.8**)
+- [awscli](https://aws.amazon.com/cli/) (>= 2.8.12)
+- Any device (e.g. a [NitroKey](https://www.nitrokey.com/) or [YubiKey](https://www.yubico.com/product/yubikey-5-nfc)) and/or app (for either [Android](https://f-droid.org/repository/browse/?fdfilter=totp&fdid=net.bierbaumer.otp_authenticator) or [iOS](https://cooperrs.de/othauth.html)) that supports [2FA/TOTP](https://en.wikipedia.org/wiki/Multi-factor_authentication).
+
+_Note: Although AWS [now supports](https://aws.amazon.com/blogs/security/use-yubikey-security-key-sign-into-aws-management-console/) the modern [FIDO2 procotol](https://fidoalliance.org/fido2/) for adding a second factor to your account [it lacks support for the command line](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_u2f_supported_configurations.html), which renders it an unsuable option for most of what you'd either do with this kickstarter or AWS APIs in general._
+
 ## A Few Notes About This Forked Repo
 
-This sets up a single AWS account with typical software developer roles, policies and groups. It also adds a basic VPC. 
+This pro kickstarter sets up a single AWS account with a basic vpc and typical software developer roles, policies and groups. 
 
-This kickstarter was not tested using a multi account setup. If interested in setting up two accounts, please refer to the instructions below from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter).
+If interested in setting up two accounts, please refer to the instructions below from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter).
 
-To begin, update the users defined in `/workshop_kickstarter/` start by applying the terraform in `./workshop_kickstarter` using keys generated from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+To begin setting up user pools, update the user accounts or email addresses in `./workshop_kickstarter/variables.tf`. Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
 
 As the root user, enable console access for the DevOpsAdmin, DevOps and PowerUser. Do not enable console access for Pipeline Users.
 
@@ -31,16 +43,6 @@ As a general rule of thumb, the DevOps and Developer roles should be assigned to
 
 ## Original Repo Setup Instructions
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
-
-## Prerequisites
-
-The following tools are required:
-
-- [Terraform](https://terraform.io) (**>= 1.2.8**)
-- [awscli](https://aws.amazon.com/cli/) (>= 2.8.12)
-- Any device (e.g. a [NitroKey](https://www.nitrokey.com/) or [YubiKey](https://www.yubico.com/product/yubikey-5-nfc)) and/or app (for either [Android](https://f-droid.org/repository/browse/?fdfilter=totp&fdid=net.bierbaumer.otp_authenticator) or [iOS](https://cooperrs.de/othauth.html)) that supports [2FA/TOTP](https://en.wikipedia.org/wiki/Multi-factor_authentication).
-
-_Note: Although AWS [now supports](https://aws.amazon.com/blogs/security/use-yubikey-security-key-sign-into-aws-management-console/) the modern [FIDO2 procotol](https://fidoalliance.org/fido2/) for adding a second factor to your account [it lacks support for the command line](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_u2f_supported_configurations.html), which renders it an unsuable option for most of what you'd either do with this kickstarter or AWS APIs in general._
 
 ## Disclaimer
 
