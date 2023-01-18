@@ -2,18 +2,19 @@
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 ## The roles created in the module are defines below:
 
-- DevOpsAdmin - The Highest Privileges are granted to this role. It CAN be used to run commands via cli without the need for additional MFA info. 
+- DevOpsAdmin - The Highest Privileges are granted to this role. Use this role sparingly and wisely! This role should be kept unassigned until a scenario arises that it is needed. It CAN be used to run commands via cli without the need for additional MFA info. 
 - DevOps - The Highest Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-- PowerUser - Normal Developer Privileges are granted to this role. It CAN be used to run commands via cli without the need for additional MFA info.
-- Developer - Normal Developer Privileges are granted to this role. It CANNOT be used to run commands via cli without the need for additional MFA info.
-- Owner - Role has access to billing and has full permissions to update and modify billing related functions
-- Billing - Role has access to billing and has limited permissions to view billing related functions
+- PowerUser - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CAN be used to run commands via cli without the need for additional MFA info.
+- Developer - Standard Developer Privileges are granted to this role. This role is limited and cannot delete many resources. It CANNOT be used to run commands via cli without the need for additional MFA info.
+- Pipeline - Scoped Pipeline Privileges are granted to this role. Service users should not have aws console access. It CAN be used to run commands via cli without the need for additional MFA info.
+- Owner - Role has access to billing and has full permissions to update and modify billing related functions. Users with this role need to access content in the console.
+- Billing - Role has access to billing and has limited permissions to view billing related functions. Users with this role need to access content in the console.
 
-## AWS Kickstarter - Pro Level
+## A Few Notes About This Forked Repo
 
-Note: This kickstarter was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
+Note: This sets up a single AWS account with typical software developer roles, policies and groups. It also adds basic VPC. This kickstarter was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
 
-For this aws kickstarter, users can apply the terraform in `./workshop_kickstarter` using keys generated from thd root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+To begin, update the users defined in `/workshop_kickstarter/` start by applying the terraform in `./workshop_kickstarter` using keys generated from thd root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
 
 As the root user, enable console access for the DevOpsAdmin, DevOpos and PowerUser. Do not enable console access for Pipeline Users.
 

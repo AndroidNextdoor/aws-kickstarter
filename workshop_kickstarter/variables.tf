@@ -2,22 +2,22 @@ variable "iam_users" {
   type        = map(map(list(string)))
   description = "A list of users you want to create inside the \"users\" account"
   default = {
-    "andrewnixdorf@androidnextdoor.com" = {
-      groups = ["DevOpsAdmins"]
+    "andrew.nixdorf+admin@gmail.com" = {
+      groups = ["Owner","DevOpsAdmins"]
     }
-    DevOps = {
+    "andrew.nixdorf+devops@gmail.com" = {
       groups = ["DevOps"]
     }
-    PowerUser = {
+    "andrew.nixdorf+poweruser@gmail.com" = {
       groups = ["PowerUsers"]
     }
-    Developer = {
+    "andrew.nixdorf+developer@gmail.com" = {
       groups = ["Developers"]
     }
-    Billing = {
+    "andrew.nixdorf+billing@gmail.com" = {
       groups = ["Billing"]
     }
-    PipelineUser = {
+    "andrew.nixdorf+pipeline@gmail.com" = {
       groups = ["Pipeline"]
     }
   }
@@ -25,22 +25,25 @@ variable "iam_users" {
 
 variable "iam_resources" {
   type        = map(map(list(string)))
-  description = "A list of users you want to create inside the \"users\" account"
+  description = "A list of resources you want to create inside the \"users\" account"
   default = {
-    "andrewnixdorf@androidnextdoor.com" = {
+    "DevOpsAdmins" = {
       groups = ["DevOpsAdmin"]
     }
     DevOps = {
       groups = ["DevOps"]
     }
-    Developer = {
+    Developers = {
       groups = ["Developers"]
     }
-    PowerUser = {
+    PowerUsers = {
       groups = ["PowerUsers"]
     }
-    PipelineUser = {
+    PipelineUsers = {
       groups = ["Pipeline"]
+    }
+    Owners = {
+      groups = ["Owner"]
     }
     Billing = {
       groups = ["Billing"]
@@ -54,6 +57,6 @@ variable "tags" {
   default = {
     Resource = "AndroidNextdoor"
     Owner = "Andrew Nixdorf"
-    Email = "nixdorfa@gmail.com"
+    Email = "andrew.nixdorf@gmail.com"
   }
 }
