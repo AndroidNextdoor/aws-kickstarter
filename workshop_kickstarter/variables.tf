@@ -3,7 +3,7 @@ variable "iam_users" {
   description = "A list of users you want to create inside the \"users\" account"
   default = {
     "andrew.nixdorf+admin@gmail.com" = {
-      groups = ["Owner","DevOpsAdmins"]
+      groups = ["DevOpsAdmins"]
     }
     "andrew.nixdorf+devops@gmail.com" = {
       groups = ["DevOps"]
@@ -13,6 +13,9 @@ variable "iam_users" {
     }
     "andrew.nixdorf+developer@gmail.com" = {
       groups = ["Developers"]
+    }
+    "andrew.nixdorf+owner@gmail.com" = {
+      groups = ["Owner"]
     }
     "andrew.nixdorf+billing@gmail.com" = {
       groups = ["Billing"]
@@ -27,26 +30,26 @@ variable "iam_resources" {
   type        = map(map(list(string)))
   description = "A list of resources you want to create inside the \"users\" account"
   default = {
-    "DevOpsAdmins" = {
+    "andrew.nixdorf+admin@gmail.com" = {
       groups = ["DevOpsAdmins"]
     }
-    DevOps = {
+    "andrew.nixdorf+devops@gmail.com" = {
       groups = ["DevOps"]
     }
-    Developers = {
-      groups = ["Developers"]
-    }
-    PowerUsers = {
+    "andrew.nixdorf+poweruser@gmail.com" = {
       groups = ["PowerUsers"]
     }
-    PipelineUsers = {
-      groups = ["Pipeline"]
+    "andrew.nixdorf+developer@gmail.com" = {
+      groups = ["Developers"]
     }
-    Owners = {
+    "andrew.nixdorf+owner@gmail.com" = {
       groups = ["Owner"]
     }
-    Billing = {
+    "andrew.nixdorf+billing@gmail.com" = {
       groups = ["Billing"]
+    }
+    "andrew.nixdorf+pipeline@gmail.com" = {
+      groups = ["Pipeline"]
     }
   }
 }

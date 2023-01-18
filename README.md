@@ -39,9 +39,9 @@ This pro kickstarter sets up a single AWS account with a basic vpc and typical s
 
 If interested in setting up two accounts, please refer to the instructions below from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter).
 
-To begin setting up user pools, update the user accounts or email addresses in `./workshop_kickstarter/variables.tf`. 
+To begin setting up user pools, update the user accounts or email addresses in `./workshop_kickstarter/variables.tf`. Duplicate users' info in both the users and resources sections.
 
-![img_1.png](docs/img_1.png)
+![img.png](docs/img.png)
 
 Next apply the terraform in `./workshop_kickstarter` with aws access keys from the root AWS account. 
 
