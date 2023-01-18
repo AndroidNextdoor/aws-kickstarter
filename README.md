@@ -49,13 +49,13 @@ Next apply the terraform in `./workshop_kickstarter` with aws access keys from t
 
 ## Begin Using Limited Users
 
-As the root user, navigate to the "Security credentials" section under an account to enable console access for the DevOps and PowerUsers.
+As the root user, navigate to the "Security credentials" section under an account to enable console access for DevOps, Developer and PowerUser.
 
 ![img.png](docs/img2.png)
 
 Do not enable console access for Pipeline Users.
 
-Setup AWS Secret Keys for DevOpsAdmin, DevOps, PowerUser, and Pipeline.
+Setup AWS Secret Keys for DevOps, Developer, PowerUser and Pipeline.
 
 If done correctly, DevOps, Developers, Owners, and Billing Groups users should be restricted from viewing anything until they have enabled an MFA device.
 After creating and adding an MFA device for an account, the user needs to log out and log back in to have the assigned role permissions.
