@@ -49,7 +49,7 @@ Next apply the terraform in `./workshop_kickstarter` with aws access keys from t
 
 ## Begin Using Limited Users
 
-As the root user navigate to the "Security credentials" section under an account to enable console access for the DevOps and PowerUsers.
+As the root user, navigate to the "Security credentials" section under an account to enable console access for the DevOps and PowerUsers.
 
 ![img.png](docs/img.png)
 
@@ -64,7 +64,7 @@ DevOpsAdmins and PowerUsers are granted access without requiring an active MFA s
 
 _As a general rule of thumb, the *DevOps* and *Developer* roles should be assigned to Engineers FIRST. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the *DevOpsAdmin* or *PowerUser* role at that time. This ensures that users abide by a company's required MFA policy._
 
-## Original Repo Setup Instructions
+## ____Original Setup Instructions Below____
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
 ## Disclaimer
