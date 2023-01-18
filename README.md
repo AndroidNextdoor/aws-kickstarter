@@ -64,6 +64,8 @@ DevOpsAdmins and PowerUsers are granted access without requiring an active MFA s
 
 _As a general rule of thumb, the *DevOps* and *Developer* roles should be assigned to Engineers FIRST. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the *DevOpsAdmin* or *PowerUser* role at that time. This ensures that users abide by a company's required MFA policy._
 
+To look at IAM policies closer, please take a look at [the core-modules](https://github.com/AndroidNextdoor/aws-core-modules-tf)
+
 ## ____Original Setup Instructions Below____
 This is a comprehensive toolkit for provisioning AWS accounts for a couple of common scenarios [in a secure way](https://www.thoughtworks.com/insights/blog/using-aws-security-first-class-citizen), with best practices applied by default. The kickstarter is using [a set of modules](https://github.com/moritzheiber/terraform-aws-core-modules) which are consistently tested and developed in an ongoing fashion.
 
