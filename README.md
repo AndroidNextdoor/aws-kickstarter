@@ -1,5 +1,6 @@
-# AWS Kickstarter - Pro
-## This repo was designed to accompany a workshop on Katalon Testing with AWS Device Farm. The roles included in the core modules are designed to demonstrate a solid organizational structure of IAM permissions.
+# AWS Kickstarter Pro
+## A Secure and Effective KickStarter for DevOps Engineers and Software Developers
+### This repo was designed to accompany a workshop on Katalon Testing with AWS Device Farm. The roles included in the core modules are designed to demonstrate a solid organizational structure of IAM permissions.
 
 ## The roles created in the module are defines below:
 
