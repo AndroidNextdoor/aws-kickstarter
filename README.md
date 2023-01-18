@@ -12,11 +12,15 @@
 
 ## A Few Notes About This Forked Repo
 
-Note: This sets up a single AWS account with typical software developer roles, policies and groups. It also adds basic VPC. This kickstarter was not tested using a multi account setup. Please refer to the original README from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter) to configure multiple accounts.
+This sets up a single AWS account with typical software developer roles, policies and groups. It also adds a basic VPC. 
 
-To begin, update the users defined in `/workshop_kickstarter/` start by applying the terraform in `./workshop_kickstarter` using keys generated from thd root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+This kickstarter was not tested using a multi account setup. If interested in setting up two accounts, please refer to the instructions below from [moritzheiber](https://github.com/moritzheiber/aws-kickstarter).
 
-As the root user, enable console access for the DevOpsAdmin, DevOpos and PowerUser. Do not enable console access for Pipeline Users.
+To begin, update the users defined in `/workshop_kickstarter/` start by applying the terraform in `./workshop_kickstarter` using keys generated from the root AWS account. After successfully applying the terraform, remove any keys associated with your root account. 
+
+As the root user, enable console access for the DevOpsAdmin, DevOps and PowerUser. Do not enable console access for Pipeline Users.
+
+Setup AWS Secret Keys for DevOpsAdmin, DevOps, PowerUser, and Pipeline.
 
 If done correctly, DevOps, Developers, Owners, and Billing Groups users should be restricted from viewing anything until they have enabled an MFA device.
 After creating and adding an MFA device for an account, the user needs to log out and log back in to have the assigned role permissions.
