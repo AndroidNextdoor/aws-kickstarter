@@ -1,8 +1,7 @@
 # AWS Kickstarter Pro
 
-PowerPoint slides from the workshop can be found in `Testaholics_Workshop.pptx`
-
 ## A Professional KickStarter for DevOps Engineers and Software Developers
+PowerPoint slides from the workshop can be found in `Testaholics_Workshop.pptx`
 
 ## Roles Created
 - **DevOpsAdmin** - **_Use this role sparingly and wisely!_** 
@@ -65,7 +64,10 @@ After creating and adding an MFA device for an account, the user needs to log ou
 
 DevOpsAdmins and PowerUsers are granted access without requiring an active MFA session token. 
 
-_As a general rule of thumb, the *DevOps* and *Developer* roles should be assigned to Engineers FIRST. If it is determined that those engineers need access to AWS resources via cli, they should be assigned the *DevOpsAdmin* or *PowerUser* role at that time. This ensures that users abide by a company's required MFA policy._
+_As a general rule of thumb, the *DevOps* and *Developer* roles should be assigned to Engineers FIRST._
+_Once established, DevOps Engineers and Developers should set their mfa arn in their `.aws/config` file._
+_If it is determined that those engineers need access to AWS resources via cli without mfa, they should be assigned the *DevOpsAdmin* or *PowerUser* role at that time._
+_This process ensures that users abide by a company's required MFA policy._
 
 To look at IAM policies closer, please take a look at [the core-modules](https://github.com/AndroidNextdoor/aws-core-modules-tf)
 
