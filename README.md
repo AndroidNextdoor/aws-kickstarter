@@ -1,4 +1,7 @@
 # AWS Kickstarter Pro
+
+PowerPoint slides from the workshop can be found in `Testaholics_Workshop.pptx`
+
 ## A Professional KickStarter for DevOps Engineers and Software Developers
 
 ## Roles Created
