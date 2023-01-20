@@ -1,8 +1,9 @@
 /**
 * 
-* This will create two groups, "admins" and "users" and let them assume the roles "resource-admin" or "resource-user" in the _same_ account, but with multi-factor authentication
+* This will create the following groups with MFA Policy Enabled: "DevOps", "Developer", "Owner" & "Billing".
+* It will also create the following groups with MFA Policy Disabled: "DevOpsAdmin" & "PowerUser".
 * For more options you can set here please [refer to the module documentation](https://github.com/AndroidNextdoor/aws-core-modules-tf).
-* 
+*
 */
 
 module "iam_users" {

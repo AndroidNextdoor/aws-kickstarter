@@ -16,8 +16,6 @@ module "iam_users" {
 
 module "iam_resources" {
   source = "git::https://github.com/AndroidNextdoor/aws-core-modules-tf.git//iam-resources"
-
-  resources = var.iam_resources
 }
 
 # This is an example of a role restricting access for regular user accounts to any VPC API to avoid potential misconfiguration
